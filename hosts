@@ -1,0 +1,7 @@
+[server-group]
+server ansible_ssh_host=127.0.0.1
+
+
+[server-group:vars]
+ansible_ssh_user=root
+ansible_ssh_pass='password'

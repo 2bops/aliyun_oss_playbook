@@ -1,0 +1,15 @@
+---
+# oss_file playbook example
+
+- hosts: server-group 
+  remote_user: root
+  become: yes
+  become_method: sudo
+  environment:
+    OSS_ACCESS_KEY:  your_access_key
+    OSS_SECRET_KEY:  your_secret_key
+
+
+  tasks:
+  - name: Get Object from OSS 
+    oss_file: bucket=my_bucket_name object=/dir/test.txt dest=/tmp/myfile.txt mode=get
